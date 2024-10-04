@@ -1,0 +1,49 @@
+/* Keyframes for the glitch effect */
+@keyframes glitch {
+    0% { transform: translate(0); opacity: 1; }
+    20% { transform: translate(-2px, 2px); opacity: 0.8; }
+    40% { transform: translate(2px, -2px); opacity: 1; }
+    60% { transform: translate(-2px, -2px); opacity: 0.8; }
+    80% { transform: translate(2px, 2px); opacity: 1; }
+    100% { transform: translate(0); opacity: 1; }
+}
+/* Glitch effect applied on the image during swap */
+.glitch {
+    animation: glitch 0.3s linear infinite;
+}
+.image {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+}
+.active {
+    opacity: 1;
+}
+
+/* Slide-in from left */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.slide-left h1{
+    animation: slideInFromLeft 0.5s ease-out forwards;
+}
+.slide-left h1 span{
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+.slide-left h2{
+    animation: slideInFromLeft 1.5s ease-out forwards;
+}
+.slide-left p{
+    animation: slideInFromLeft 2s ease-out forwards;
+}
+
+/* Slide-in from bot */
+@keyframes fadeInUp { from {opacity: 0;transform: translate3d(0, 50px, 0);} to {opacity: 1;transform: translate3d(0, 0, 0);} }
+.fade-in-up {opacity: 0;transform: translate3d(0, 50px, 0);transition: opacity 1s ease-out, transform 1s ease-out;}
+.fade-in-up.is-visible {opacity: 1;transform: translate3d(0, 0, 0);}

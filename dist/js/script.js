@@ -24,7 +24,7 @@ hamburger.addEventListener('click', function () {
   navMenu.classList.toggle('hidden');
 });
 
-// Klik di luar hamburger
+// Click outside the hamburger
 window.addEventListener('click', function (e) {
   if (e.target != hamburger && e.target != navMenu) {
     hamburger.classList.remove('hamburger-active');
@@ -35,7 +35,6 @@ window.addEventListener('click', function (e) {
 // Darkmode toggle
 const darkToggle = document.querySelector('#dark-toggle');
 const html = document.querySelector('html');
-
 darkToggle.addEventListener('click', function () {
   if (darkToggle.checked) {
     html.classList.add('dark');
@@ -46,9 +45,10 @@ darkToggle.addEventListener('click', function () {
   }
 });
 
-// pindahkan posisi toggle sesuai mode
+// change toggle according to mode
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   darkToggle.checked = true;
 } else {
   darkToggle.checked = false;
 }
+
