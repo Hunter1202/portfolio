@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
-    <title>Trúc Lã in your area</title>
+    <title>Trúc Lã Anh | Portfolio, Blog, and Contact</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="TrucLA - Portfolio">
-    <meta property="og:type" content="Portfolio" />
+    <meta name="description" content="TrucLA - About - Portfolio - Blog - Contact - More&more...">
+    <meta property="og:title" content="Trúc Lã Anh - Portfolio, Blog, and Contact" />
+    <meta property="og:description" content="Visit Trúc Lã's portfolio to explore projects and blogs on web development. Contact for collaborations." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trucla.id.vn/">
     <meta property="og:image" content="dist/img/me.jpg" />
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="canonical" href="https://trucla.id.vn/">
     <link href="dist/css/final.css" rel="stylesheet" />
     <link href="dist/css/animation.css" rel="stylesheet" />
+    <link href="dist/img/trucla.png" rel="shortcut icon"/>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Trúc Lã",
+        "jobTitle": "Full Stack Web Developer",
+        "url": "https://trucla.id.vn/",
+        "sameAs": [
+          "https://www.facebook.com/TrucLA6868/",
+          "https://www.linkedin.com/in/tr%C3%BAc-l%C3%A3-anh-49138b21a/",
+          "https://github.com/Hunter1202/"
+        ]
+      }
+    </script>
+
     <script>
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -17,15 +38,14 @@
         document.documentElement.classList.remove('dark');
       }
     </script>
-    <link href="../dist/img/trucla.png" rel="shortcut icon"/>
   </head>
   <body>
     <!-- Header Start -->
-    <header class="absolute top-0 left-0 z-50 flex w-full items-center bg-transparent">
+    <header class="absolute top-0 left-0 z-[9999] flex w-full items-center bg-transparent">
       <div class="container">
         <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="block py-6 text-lg font-bold text-primary">Trúc Lã</a>
+            <a href="#home" class="block py-6 text-lg font-bold text-primary"><strong>Trúc Lã</strong></a>
           </div>
           <div class="flex items-center px-4">
             <button id="hamburger" aria-label="menu-btn" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
@@ -39,19 +59,19 @@
               class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Home</a>
+                  <a href="#home" aria-label="TrucLA-Home" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">About</a>
+                  <a href="#about" aria-label="TrucLA-About" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">About</a>
                 </li>
                 <li class="group">
-                  <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+                  <a href="#portfolio" aria-label="TrucLA-Portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
                 </li>
                 <li class="group">
-                  <a href="#blog" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
+                  <a href="#blog" aria-label="TrucLA-Blog" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
                 </li>
                 <li class="group">
-                  <a href="#contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+                  <a href="#contact" aria-label="TrucLA-Contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
                 </li>
                 <li class="mt-3 flex items-center pl-8 lg:mt-0">
                   <div class="flex">
@@ -79,12 +99,10 @@
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2 slide-left z-50">
             <h1 class="text-base font-semibold text-primary md:text-xl">
-              Greeting 👋, from
-              <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Trúc Lã Anh</span>
+              Greeting 👋, from<span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Trúc Lã Anh</span>
             </h1>
             <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
-              Full Stack Web Dev &
-              <span class="text-dark dark:text-white">Content Creator</span>
+              Full Stack Web Dev &<span class="text-dark dark:text-white">Content Creator</span>
             </h2>
             <p class="mb-10 font-medium leading-relaxed text-secondary">
               "Your web dreams, <span class="font-bold text-dark dark:text-white">my reality."</span>
@@ -93,8 +111,8 @@
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:mt-9">
-              <img src="dist/img/trucla.png" alt="TrucLA" id="img1" class="image relative z-10 mx-auto max-w-full active" />
-              <img src="dist/img/me.png" alt="TrucLA" id="img2" class="image hidden relative z-10 mx-auto max-w-full" />
+              <img src="dist/img/trucla.png" alt="TrucLA-photo" id="img1" class="image relative z-10 mx-auto max-w-full active" />
+              <img src="dist/img/me.png" alt="TrucLA-photo" id="img2" class="image hidden relative z-10 mx-auto max-w-full" />
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
                 <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <path
