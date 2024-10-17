@@ -7,23 +7,44 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-<div class="fixed top-0 right-4 justify-end mb-4">
-  <button id="toggleLang" class="bg-blue-500 text-white py-1 px-3 rounded">Tiếng Việt</button>
+<!-- Language Toggle Button -->
+<div class="fixed top-4 right-16 flex items-center space-x-4">
+  <button id="toggleLang" class="bg-blue-500 text-white py-2 px-5 rounded-full shadow-lg hover:bg-blue-600 transition ease-in-out duration-300">
+    Tiếng Việt
+  </button>
+
+  <!-- Print Button -->
+  <button onclick="window.print()" class="bg-green-500 text-white py-2 px-5 rounded-full shadow-lg hover:bg-green-600 transition ease-in-out duration-300">
+    Print
+  </button>
 </div>
 
+<div class="pt-10"></div>
 <div class="max-w-4xl mx-auto my-8 p-8 bg-white shadow-lg">
-
-  <!-- Header -->
-  <div class="flex justify-between items-center border-b border-gray-300 pb-4 mb-6">
-    <div>
+  <div class="flex space-x-8 justify-between items-center border-b border-gray-300 pb-4 mb-6">
+    <div class="flex-1">
       <h1 class="text-4xl font-bold">Lã Anh Trúc</h1>
       <p class="text-lg text-gray-600">Intern/Fresher Java Developer</p>
     </div>
-    <div class="text-right">
+    <div class="flex-2">
       <p class="text-gray-600 flex">Email: dev@trucla.id.vn</p>
       <p class="text-gray-600 flex">Address: Cau Giay District, Hanoi</p>
+      <p class="text-gray-600 flex">Phone: 0988715180</p>
     </div>
   </div>
+
+  <!-- introEN -->
+  <section id="introEN" class="mb-12">
+    <h1 class="text-3xl font-semibold mb-4">Introduction</h1>
+    <p class="text-gray-600">I am a final-year student at Hanoi University of Science, Viet Nam National University, specializing in Java programming. I am actively seeking opportunities to apply my technical skills in a dynamic and challenging work environment.</p>
+  </section>
+
+  <!-- introVN -->
+  <section id="introVN" class="mb-12 hidden">
+    <h1 class="text-3xl font-semibold mb-4">Introduction</h1>
+    <p class="text-gray-600">Em đang là sinh viên năm cuối tại trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Hà Nội. Với chuyên môn về lập trình Java, em đang tích cực tìm kiếm cơ hội để áp dụng các kiến thức, kỹ năng của mình trong môi trường làm việc năng động và đầy thử thách.</p>
+  </section>
+
 
   <!-- Career Objective -->
   <section id="careerObjectiveEN" class="mb-12">
@@ -46,11 +67,11 @@
     <div class="flex space-x-6">
       <div class="flex-1">
         <h3 class="text-xl font-medium">Mục tiêu ngắn hạn</h3>
-        <p class="text-gray-600">Tôi mong muốn sử dụng kiến thức Java hiện có để đóng góp hiệu quả vào các dự án của công ty. </p>
+        <p class="text-gray-600">Em mong muốn sử dụng kiến thức Java hiện có để đóng góp hiệu quả vào các dự án của công ty. Bên cạnh đó, em rất hào hứng khi được học các kỹ năng mới và cộng tác với nhiều nhóm khác nhau để phát triển các dự án thành công.</p>
       </div>
       <div class="flex-1">
         <h3 class="text-xl font-medium">Mục tiêu dài hạn</h3>
-        <p class="text-gray-600">Mục tiêu dài hạn của tôi là trở thành một lập trình viên Full-stack thành thạo, nắm vững cả công nghệ backend và frontend.</p>
+        <p class="text-gray-600">Mục tiêu dài hạn của em là trở thành một lập trình viên Full-stack thành thạo, nắm vững cả công nghệ backend và frontend. Đồng thời kết hợp các best practices của DevOps để nâng cao hiệu quả.</p>
       </div>
     </div>
   </section>
@@ -80,11 +101,10 @@
         </ul>
       </div>
 
-      <!-- Internship Experience -->
+      <!-- Internship  -->
       <div class="relative pl-10">
-        <!-- Dot on the timeline -->
+        <!-- Dot on timeline -->
         <div class="absolute top-3 left-4 w-3 h-3 rounded-full bg-black"></div>
-        <!-- Job Title and Date -->
         <div class="flex justify-between items-center mb-2">
           <h3 class="text-xl font-semibold">Intern at BKAV CA</h3>
           <span class="text-gray-500 italic">10/2022 - 4/2023</span>
@@ -101,17 +121,17 @@
     </div>
   </section>
 
+<!--  workExperienceVN-->
   <section id="workExperienceVN" class="mb-12 hidden">
     <h1 class="text-3xl font-semibold mb-6 border-b border-gray-300 pb-2">Kinh nghiệm làm việc</h1>
     <div class="space-y-8 relative">
       <!-- Vertical line for timeline -->
       <div class="absolute left-5 top-0 bottom-0 w-1 bg-gray-300"></div>
 
-      <!-- Freelance Experience -->
+      <!-- Freelance  -->
       <div class="relative pl-10">
         <!-- Dot on the timeline -->
         <div class="absolute top-3 left-4 w-3 h-3 rounded-full bg-black"></div>
-        <!-- Job Title and Date -->
         <div class="flex justify-between items-center mb-2">
           <h3 class="text-xl font-semibold">Remote IT support (Freelance)</h3>
           <span class="text-gray-500 italic">10/2023 - Now</span>
@@ -119,15 +139,15 @@
         <!-- Job Details -->
         <ul class="list-disc list-inside text-gray-600 space-y-1">
           <li>Tạo các trang web và hệ thống bằng Java Spring theo nhu cầu của khách hàng.</li>
-          <li>Hỗ trợ học sinh, sinh viên trong quá trình lên ý tưởng, phát triển và hoàn thiện các trang web bằng Java Spring hoặc các dự án trên Linux.</li>
+          <li>Hỗ trợ học sinh, sinh viên trong quá trình lên ý tưởng, phát triển và hoàn thiện các trang web bằng Java Spring hoặc các dự án trên HĐH Linux.</li>
           <li>Hỗ trợ khách hàng triển khai dự án lên VPS hoặc nền tảng đám mây.</li>
           <li>Xử lý sự cố và giải quyết các vấn đề về back-end và front-end web theo yêu cầu của khách hàng.</li>
         </ul>
       </div>
 
-      <!-- Internship Experience -->
+      <!-- Internship  -->
       <div class="relative pl-10">
-        <!-- Dot on the timeline -->
+        <!-- dot on timeline -->
         <div class="absolute top-3 left-4 w-3 h-3 rounded-full bg-black"></div>
         <!-- Job Title and Date -->
         <div class="flex justify-between items-center mb-2">
@@ -152,7 +172,7 @@
       <h1 class="text-3xl font-semibold mb-4">Projects</h1>
           <h2 class="text-xl text-gray-900"><strong>S-Travel</strong> (Tour booking platform online)</h2>
           <p class="mb-4"><strong>Position:</strong> Full-stack developer</p>
-          <p class="text-blue-600 mb-2">Visit the live project at:
+          <p class="text-blue-600 mb-2">Live site:
             <a href="https://s-travel.vn" class="underline hover:text-blue-800">s-travel.vn</a>
           </p>
           <p class="text-gray-600 italic text-lg mb-4">Tech Stack: Java Spring MVC with Thymeleaf, Hibernate, Maven, MySQL/MariaDB, HTML, Tailwind, JavaScript, Git, Debian Server, Nginx, Azure Cloud.</p>
@@ -193,7 +213,7 @@
     <div class="mb-12">
       <h2 class="text-xl font-semibold text-gray-900">Portfolio Website</h2>
       <p class="mb-4"><strong>Position:</strong> Full-stack developer</p>
-      <p class="text-blue-600">Visit the live project at:
+      <p class="text-blue-600">Live site:
         <a href="https://trucla.id.vn/" class="underline hover:text-blue-800">trucla.id.vn</a>
       </p>
       <p class="text-gray-600 italic text-lg mb-4">Tech Stack: HTML, TailwindCSS, JavaScript, Github, Jekyll.</p>
@@ -396,8 +416,8 @@
   let isEnglish = true;
 
   toggleLangBtn.addEventListener('click', () => {
-    const enSections = document.querySelectorAll('#careerObjectiveEN, #workExperienceEN, #projectsEN, #education_skillEN');
-    const vnSections = document.querySelectorAll('#careerObjectiveVN, #workExperienceVN, #projectsVN, #education_skillVN');
+    const enSections = document.querySelectorAll('#introEN, #careerObjectiveEN, #workExperienceEN, #projectsEN, #education_skillEN');
+    const vnSections = document.querySelectorAll('#introVN, #careerObjectiveVN, #workExperienceVN, #projectsVN, #education_skillVN');
 
     if (isEnglish) {
       enSections.forEach(section => section.classList.add('hidden'));
