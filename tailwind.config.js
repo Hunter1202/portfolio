@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['index.html'],
+  content: ['index.html','cv.html'],
   darkMode: 'class',
   theme: {
     container: {
