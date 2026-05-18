@@ -15,9 +15,13 @@
     <meta property="og:image" content="dist/img/rts.webp" />
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://trucla.id.vn/">
-    <!-- <link href="/dist/css/tailwind.css" rel="stylesheet"/> -->
     <link href="tailwind.css" rel="stylesheet"/>
     <link href="/dist/img/trucla.png" rel="shortcut icon"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://googleapis.com">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://googleapis.com">
+    <noscript><link rel="stylesheet" href="https://googleapis.com"></noscript>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script type="application/ld+json">
         {
@@ -42,7 +46,7 @@
     </script>
     <style>
         /* Custom Tailwind Configuration */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'); */
 
         * {
             font-family: 'Inter', sans-serif;
@@ -506,7 +510,7 @@
             <div class="w-full lg:w-1/2 px-4">
                 <div class="relative">
                     <div class="relative z-10 mx-auto max-w-md lg:max-w-lg float-animation">
-                        <img src="/dist/img/truc.webp" width="512" height="512" alt="TrucLA" id="img1" class="image active w-full rounded-2xl shadow-2xl"/>
+                        <img src="/dist/img/truc.webp" fetchpriority="high" width="512" height="512" alt="TrucLA" id="img1" class="image active w-full rounded-2xl shadow-2xl"/>
 <!--                        <img src="https://via.placeholder.com/400x500/06b6d4/ffffff?text=Developer" alt="Developer" id="img2" class="image hidden absolute top-0 left-0 w-full rounded-2xl shadow-2xl"/>-->
                     </div>
 
