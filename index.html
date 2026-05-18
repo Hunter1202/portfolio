@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" role="main" class="scroll-smooth">
 <head>
     <title>TrucLA | Portfolio and Contact</title>
     <meta charset="UTF-8"/>
@@ -12,11 +12,11 @@
     <meta property="og:description" content="Visit Trúc Lã's portfolio to explore projects on web development. Contact for collaborations." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://trucla.id.vn/">
-    <meta property="og:image" content="dist/img/trucla.jpg" />
+    <meta property="og:image" content="dist/img/rts.webp" />
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://trucla.id.vn/">
-    <link href="/dist/css/tailwind.css" rel="stylesheet" />
-    <link href="tailwind.css" rel="stylesheet" />
+    <!-- <link href="/dist/css/tailwind.css" rel="stylesheet"/> -->
+    <link href="tailwind.css" rel="stylesheet"/>
     <link href="/dist/img/trucla.png" rel="shortcut icon"/>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script type="application/ld+json">
@@ -506,7 +506,7 @@
             <div class="w-full lg:w-1/2 px-4">
                 <div class="relative">
                     <div class="relative z-10 mx-auto max-w-md lg:max-w-lg float-animation">
-                        <img src="/dist/img/truc.webp" alt="TrucLA" id="img1" class="image active w-full rounded-2xl shadow-2xl"/>
+                        <img src="/dist/img/truc.webp" width="512" height="512" alt="TrucLA" id="img1" class="image active w-full rounded-2xl shadow-2xl"/>
 <!--                        <img src="https://via.placeholder.com/400x500/06b6d4/ffffff?text=Developer" alt="Developer" id="img2" class="image hidden absolute top-0 left-0 w-full rounded-2xl shadow-2xl"/>-->
                     </div>
 
@@ -533,8 +533,30 @@
         </div>
 
         <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <!-- Project 1 -->
+            <div class="project-card bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg fade-in-up">
+                <div class="overflow-hidden">
+                    <img src="dist/img/rts.webp" alt="RTShop" class="w-full h-64 object-cover"/>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">RTShop</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">TrucLA - Professional Website Provider.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 rounded-full text-sm font-medium">NextJS</span>
+                        <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 rounded-full text-sm font-medium">NodeJS</span>
+                        <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 rounded-full text-sm font-medium">PWA</span>
+                    </div>
+                    <a href="https://rts.trucla.id.vn" class="inline-flex items-center text-teal-500 hover:text-teal-600 font-semibold transition-colors duration-300">
+                        Book now!
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
             <div class="project-card bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg fade-in-up">
                 <div class="overflow-hidden">
                     <img src="dist/img/wanderlust.webp" alt="Wanderlust" class="w-full h-64 object-cover"/>
@@ -543,9 +565,9 @@
                     <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Wanderlust</h3>
                     <p class="text-slate-600 dark:text-slate-400 mb-4">Traveling, Booking & Tourism Platform</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 rounded-full text-sm font-medium">Spring</span>
+                        <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 rounded-full text-sm font-medium">Java Spring</span>
                         <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 rounded-full text-sm font-medium">Thymeleaf</span>
-                        <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 rounded-full text-sm font-medium">MariaDB</span>
+                        <span class="px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-400 rounded-full text-sm font-medium">Azure Cloud Services</span>
                     </div>
                     <a href="https://wanderlust.io.vn" class="inline-flex items-center text-teal-500 hover:text-teal-600 font-semibold transition-colors duration-300">
                         View
@@ -555,28 +577,6 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Project 2 -->
-            <!-- <div class="project-card bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg fade-in-up">
-                <div class="overflow-hidden">
-                    <img src="dist/img/note.webp" alt="Note" class="w-full h-64 object-cover"/>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Note</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-4">A place to organize your thoughts.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 rounded-full text-sm font-medium">ReactJS</span>
-                        <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 rounded-full text-sm font-medium">Supabase</span>
-                        <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-400 rounded-full text-sm font-medium">Tailwind</span>
-                    </div>
-                    <a href="https://note.trucla.id.vn" class="inline-flex items-center text-teal-500 hover:text-teal-600 font-semibold transition-colors duration-300">
-                        View
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div> -->
 
             <!-- Project 3 -->
             <div class="project-card bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg fade-in-up">
@@ -588,7 +588,7 @@
                     <p class="text-slate-600 dark:text-slate-400 mb-4">A focus productivity timer combining Pomodoro technique with ambient music for enhanced concentration.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 rounded-full text-sm font-medium">NextJS</span>
-<!--                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 rounded-full text-sm font-medium">Vercel</span>-->
+                        <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 rounded-full text-sm font-medium">Vercel</span>
                         <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 rounded-full text-sm font-medium">PWA</span>
                     </div>
                     <a href="https://profocus.trucla.id.vn/" class="inline-flex items-center text-teal-500 hover:text-teal-600 font-semibold transition-colors duration-300">
